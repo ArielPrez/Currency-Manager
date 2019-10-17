@@ -8,6 +8,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Currency-Manager';
   ready = false;
+  currencies: any = [
+      {active: true, name: 'Dollar'},
+      {active: true, name: 'Euro'},
+      {active: true, name: 'Pound sterling'},
+      {active: false, name: 'Bitcoin'}
+  ];
 
   constructor() {
     setTimeout(() => {

@@ -1,6 +1,12 @@
 <app-crncy-man></app-crncy-man>
 <hr>
-<h1>Hello</h1>
+<ul>
+  <ng-container *ngFor="let coin of currencies">
+      <li *ngIf="coin.active">
+          {{coin.name}}
+      </li>  
+  </ng-container>
+</ul>
 <hr>
 <button [disabled]="!ready" (click)="showExample()">Show Example</button>
 <hr>
