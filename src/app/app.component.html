@@ -1,15 +1,16 @@
+<!-- This show a text convert currency-->
+<input type="text" placeholder="Write a number:" [(ngModel)]="text">
+<h3>Your wrote: " {{text}} "</h3>
+
 <!-- This show a list -->
 <ul>
   <ng-container *ngFor="let coin of currencies">
       <li *ngIf="coin.active">
-          {{coin.name}}
+          {{coin.name}} - {{coin.rate}}
       </li>  
   </ng-container>
 </ul>
-<hr>
 
-<!-- This show a button -->
-<button [disabled]="!ready" (click)="showExample()">Show Example</button>
 <hr>
 
 <!-- This show a map -->
@@ -18,13 +19,21 @@
 </agm-map>
 <hr>
 
-<!-- This show a text box -->
+<!-- This show a text box
 <input type="text" placeholder="Write someting here:" [(ngModel)]="text">
 <hr>
 
-<!-- This show a dinamic text -->
-<h3>Your wrote: " {{text}} "</h3>
+This show a dinamic text
+<h3>Your wrote: " {{text}} "</h3> -->
+
+<!-- This show a button -->
+<button [disabled]="!ready" (click)="showExample()">
+  Show Angular Example
+</button>
 <hr>
 
 <!-- This show the Angular example -->
-<app-example></app-example>
+<span *ngIf="angularActive">
+    <app-example></app-example>
+</span>
+
