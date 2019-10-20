@@ -1,4 +1,4 @@
-<hr>
+<!-- This show a list -->
 <ul>
   <ng-container *ngFor="let coin of currencies">
       <li *ngIf="coin.active">
@@ -7,10 +7,24 @@
   </ng-container>
 </ul>
 <hr>
+
+<!-- This show a button -->
 <button [disabled]="!ready" (click)="showExample()">Show Example</button>
 <hr>
+
+<!-- This show a map -->
+<agm-map [latitude]="lat" [longitude]="lng">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
+<hr>
+
+<!-- This show a text box -->
 <input type="text" placeholder="Write someting here:" [(ngModel)]="text">
 <hr>
+
+<!-- This show a dinamic text -->
 <h3>Your wrote: " {{text}} "</h3>
 <hr>
+
+<!-- This show the Angular example -->
 <app-example></app-example>

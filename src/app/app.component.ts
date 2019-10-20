@@ -14,6 +14,8 @@ export class AppComponent {
       {active: true, name: 'Pound sterling'},
       {active: false, name: 'Bitcoin'}
   ];
+  lat = 25.7799355;
+  lng = -80.1866916;
 
   constructor() {
     setTimeout(() => {
