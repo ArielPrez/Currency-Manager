@@ -1,6 +1,12 @@
 <!-- This show a text convert currency-->
 <input type="text" placeholder="Write a number:" [(ngModel)]="text">
-<h3>Your wrote: " {{text}} "</h3>
+<ng-container *ngFor="let coin of currencies">
+    <h5 *ngIf="text">{{coin.symbol}}: "
+        {{text * coin.rate}}
+      "</h5>
+      
+  </ng-container>
+
 
 <!-- This show a list -->
 <ul>

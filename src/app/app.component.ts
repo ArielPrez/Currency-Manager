@@ -10,11 +10,31 @@ export class AppComponent {
   ready = false;
   angularActive = false;
   currencies: any = [
-      {active: true, name: 'Dollar', rate: 1},
-      {active: true, name: 'Euro', rate: 0.8973438622},
-      {active: true, name: 'Pound sterling', rate: 0.7756191673},
-      {active: true, name: 'Yen', rate: 108.5516870065},
-      {active: false, name: 'Bitcoin', rate: 8059.99}
+      {
+        active: true,
+        name: 'Dollar',
+        symbol: 'USD',
+        rate: 1},
+      {
+        active: true,
+        name: 'Euro',
+        symbol: 'EUR',
+        rate: 0.8973438622},
+      {
+        active: true,
+        name: 'Pound sterling',
+        symbol: 'GBP',
+        rate: 0.7756191673},
+      {
+        active: true,
+        name: 'Yen',
+        symbol: 'JPY',
+        rate: 108.5516870065},
+      {
+        active: true,
+        name: 'Bitcoin',
+        symbol: 'BTC',
+        rate: 0.00012}
   ];
   lat = 25.7799355;
   lng = -80.1866916;
